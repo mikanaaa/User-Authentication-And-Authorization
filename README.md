@@ -8,8 +8,9 @@ Exploring subjects such as: authentication, authorization, session, jwt, passwor
 * Session Cycle
   * Generation
   * Verification
+* JWT
 * OAuth2.0
-* OIDc
+* OpenID Connect (OIDC)
 ## Password Management
 ----------
 ### Log In
@@ -33,8 +34,19 @@ Exploring subjects such as: authentication, authorization, session, jwt, passwor
 ## Session Cycle
 ----------
 ![session](Diagrams/SessionCycle.svg)
-1. To obtain protected data, client/user needs to be authenticated & authorized
-2. Client provides data needed for authentication
-3. Server reads data, authenticates user & generates session
-4. Session is sent back to client
-5. Client sends Session_ID with each request
+1. To obtain protected data, client/user needs to be authenticated & authorized.
+2. Client provides data needed for authentication.
+3. Server reads data, authenticates user & generates session.
+4. Session is sent back to client.
+5. Client sends Session_ID with each request.
+## OAuth2.0
+----------
+![oauth](Diagrams/OAuth.svg)
+
+Client web application wants to perform actions on data owned by resource owner, on resource server. To do that client needs to be authorized.
+1. Client requests authorization.
+2. Authorization server asks RO for credentials.
+3. When authenticated server asks RO if it wants to give authorization to client.
+4. Client gets authorization code from Authorization Server.
+5. That code, together with client secret is exchanged for access token in back-end between client & authorization server.
+6. Client sends requests to resource server with newly obtained *access token*.
