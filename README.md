@@ -50,3 +50,6 @@ Client web application wants to perform actions on data owned by resource owner,
 4. Client gets authorization code from Authorization Server.
 5. That code, together with client secret is exchanged for access token in back-end between client & authorization server.
 6. Client sends requests to resource server with newly obtained *access token*.
+## OpenID Connect
+----------
+OIDC is built on top of OAuth2.0 to support authentication. Only major differences are that scope has *openid* and that exchanging authorization code gets us access token **and** User_ID token.
