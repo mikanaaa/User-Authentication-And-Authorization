@@ -39,6 +39,8 @@ Exploring subjects such as: authentication, authorization, session, jwt, passwor
 3. Server reads data, authenticates user & generates session.
 4. Session is sent back to client.
 5. Client sends Session_ID with each request.
+## JWT - Json Web Token
+Alternative to opaque, statefull tokes used in classic sessions. Used commonly in WebApis/RESTful services to supply data to Single Page Applications. All data is stored in token, and only thing server needs to is to verify that token has not been tampered with. HMAC used for that purpose. Used as Bearer token in Authorization header of HTTP requests.
 ## OAuth2.0
 ----------
 ![oauth](Diagrams/OAuth.svg)
